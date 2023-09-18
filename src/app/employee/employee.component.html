@@ -1,0 +1,97 @@
+<br> <br> <br>
+<div class="container">
+    <div class="card">
+        <h1 class="text-center card-header">List of Form :</h1>
+    </div>
+
+    <div class="container">
+        <div class="search-container">
+            <input [(ngModel)]="searchText" style="caret-color: red; width: 20%; margin-left: 75rem"
+                placeholder="SearchById" class="form-group search-input form-control" type="text"
+                (input)="searchParticipant()">
+            <span class="search-icon"><i class=" fas fa-search"></i></span>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employee">
+                    <td>{{ emp.id }}</td>
+                    <td>{{ emp.name }}</td>
+                    <td>{{ emp.email }}</td>
+                    <td>
+                        <button type="button" (click)="deleteEmployee(emp.id)" class="btn btn-danger">Delete</button>
+                        &nbsp; <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal" (click)="edit(emp)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container mt-3">
+        <a class="btn btn-info" routerLink="/Formulaire">Back to Form</a>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Update Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form #updateForm="ngForm" (ngSubmit)="updateEmployee()">
+                        <div class="form-group">
+                            <label for="id">Employee ID:</label>
+                            <input type="text" [(ngModel)]="EmployeeToUpdate.id" disabled #id name="id" id="id"
+                                class="form-control" placeholder="Employee ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Employee Name:</label>
+                            <input required type="text" [(ngModel)]="EmployeeToUpdate.name" #name name="name" id="name"
+                                class="form-control" placeholder="Employee Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Employee Email:</label>
+                            <input required pattern="{{ aa }}" type="email" [(ngModel)]="EmployeeToUpdate.email"
+                                #address name="email" id="email" class="form-control" placeholder="Employee Email">
+                        </div><br>
+                        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+                        <div class="text-center">
+                            <button [disabled]="updateForm.form.invalid" type="submit" class="btn btn-primary"
+                                #updateButton>
+                                Update
+                            </button>
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div><!-- ctrl shift l 
+<hr class="aa haanuui">
+<hr  class="aa haanuui">
+<hr  class="aa haanuui"> 
+<hr  class="aa haanuui"> 
+<hr class="aa haanuui">-->
+<!--
+alt + shift flesh down
+<hr class="aa haanuui">
+<hr class="aa haanuui">
+<hr class="aa haanuui">-->

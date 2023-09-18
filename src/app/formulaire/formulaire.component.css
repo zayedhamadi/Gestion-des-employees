@@ -1,0 +1,76 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card {
+    border: none;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover,
+.btn-success:hover {
+    filter: brightness(90%);
+}
+
+/* Center the form within the card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add spacing between form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style the submit button */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+}
+
+/* Style the logout and employee buttons */
+.btn-outline-danger,
+.btn-outline-warning {
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    /* Equal width for both buttons */
+}

@@ -1,0 +1,43 @@
+<br><br>
+<div class="container-fluid">
+    <form #registerform="ngForm" class="needs-validation" novalidate (ngSubmit)="register(registerform)">
+
+        <div class="form-group">
+            <label for="id">Employee ID:
+                <input required #number (ngModel)="number" placeholder="Employee ID" type="number" id="id"
+                    class="form-control" name="id">
+            </label>
+            <div class="invalid-feedback">
+                Please enter a valid Employee ID.
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Employee Name:
+                <input required #name (ngModel)="name" placeholder="Employee Name" type="text" id="name"
+                    class="form-control" name="name">
+            </label>
+            <div class="invalid-feedback">
+                Please enter the Employee's name.
+            </div>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="email">Employee email:
+                <input style="caret-color: red" required #adresse (ngModel)="adresse" placeholder="Employee email"
+                    pattern={{aa}} type="email" id="email" class="form-control" name="email" />
+            </label>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <input #registerform [disabled]="registerform.form.invalid" class="btn btn-success w-100" type="submit"
+                value="Register">
+
+        </div>
+    </form>
+</div>

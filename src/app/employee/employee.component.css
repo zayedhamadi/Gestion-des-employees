@@ -1,0 +1,115 @@
+.container {
+    margin-top: 30px;
+}
+
+.card {
+    border: none;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.table-bordered {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.table-bordered th {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+.table-bordered td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+.btn-back {
+    margin-top: 20px;
+}
+
+
+.modal-content {
+    max-width: 500px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.modal-header {
+    text-align: center;
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.modal-body {
+    padding: 20px;
+}
+
+
+
+.form-control {
+    border-radius: 5px;
+}
+
+
+.modal-body .btn-primary,
+.modal-body .btn-danger {
+    width: 48%;
+}
+
+
+.btn-logout {
+    margin-top: 20px;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 5.9rem;
+}
+
+.search-icon i {
+    font-size: 16px;
+    color: #ccc;
+
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+    width: 20%;
+    margin-left: 75rem;
+}
+
+:host {
+    display: block;
+}
